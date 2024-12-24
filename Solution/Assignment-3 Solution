@@ -1,0 +1,20 @@
+def fibonacci_sequence(terms=None, max_value=None):
+    if terms is not None and max_value is not None:
+        raise ValueError("Please provide either 'terms' or 'max_value', not both.")
+    sequence = []
+    a, b = 0, 1
+    
+    if terms is not None:
+        for _ in range(terms):
+            sequence.append(a)
+            a, b = b, a + b
+    elif max_value is not None:
+        while a < max_value:
+            sequence.append(a)
+            a, b = b, a + b
+    else:
+        raise ValueError("Please provide either 'terms' or 'max_value'.")
+    return sequence
+print(fibonacci_sequence(int(input('Enter number'))))
+print(fibonacci_sequence(int(input('Enter number'))))
+
