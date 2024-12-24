@@ -1,1 +1,12 @@
+def rev_func(string):
+    revstr = ''
+    count = len(string) - 1
+    while count >= 0:
+        print('String Index: ',string[count],' - ', count)
+        revstr = revstr + string[count]
+        count = count - 1
+    return revstr
+string = str(input())
+print('Original String: ', string)
+print('Reverse String: ', rev_func(string))
 
